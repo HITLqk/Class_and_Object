@@ -1,25 +1,15 @@
-
 #include <iostream>
 #include "Person.h"
 using namespace std;
 int main()
 {
-	int iResult = -1;
-	CPerson p;
-	iResult = p.setAge(25);
-	if (iResult >= 0)
-		cout << "m_shAge is:" << p.getAge() << endl;
-
-	iResult = p.setIndex(0);
-	if (iResult >= 0)
-		cout << "m_iIndex is:" << p.getIndex() << endl;
-
-	char bufTemp[] = "Mary";
-	iResult = p.setName(bufTemp);
-	if (iResult >= 0)
-		cout << "m_cName is:" << p.getName() << endl;
-
-	iResult = p.setSalary(1700.25);
-	if (iResult >= 0)
-		cout << "m_dSalary is:" << p.getSalary() << endl;
+	CPerson p1(20, 30, 100);
+	CPerson p2(p1);
+	cout << "m_iIndex of p1 is:" << p1.getIndex() << endl;
+	cout << "m_shAge of p1 is:" << p1.getAge() << endl;
+	cout << "m_dSalary of p1 is:" << p1.getSalary() << endl;
+	cout << "m_iIndex of p2 is:" << p2.getIndex() << endl;
+	cout << "m_shAge of p2 is:" << p2.getAge() << endl;
+	cout << "m_dSalary of p2 is:" << p2.getSalary() << endl;
+	return 0;
 }
